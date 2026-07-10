@@ -1,0 +1,33 @@
+name: AutoTaskApp
+options:
+  bundleIdPrefix: com.example.autotask
+  deploymentTarget:
+    iOS: "18.0"
+  xcodeVersion: "16.0"
+
+targets:
+  AutoTaskApp:
+    type: application
+    platform: iOS
+    sources:
+      - App
+      - Shared
+    settings:
+      base:
+        INFOPLIST_FILE: App/Info.plist
+        CODE_SIGN_ENTITLEMENTS: App/AutoTaskApp.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.autotask
+    dependencies: []
+
+  XPCHelper:
+    type: xpc-service
+    platform: iOS
+    sources:
+      - XPCService
+      - Shared
+    settings:
+      base:
+        INFOPLIST_FILE: XPCService/Info.plist
+        CODE_SIGN_ENTITLEMENTS: XPCService/XPCHelper.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.autotask.XPCHelper
+    dependencies: []
