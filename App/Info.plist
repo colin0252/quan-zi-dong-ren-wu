@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>NSAccessibilityUsageDescription</key>
+    <string>此功能需要辅助功能权限以读取其他应用的界面信息，用于研究目的。</string>
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>audio</string>
+        <string>processing</string>
+    </array>
+    <key>UIApplicationSupportsIndirectInputEvents</key>
+    <true/>
+</dict>
+</plist>
