@@ -15,7 +15,13 @@ jobs:
       - name: Setup Xcode
         uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '16.1'   # 或 'latest'，按实际可用的版本填写
+          xcode-version: '16.1'
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
 
       - name: Build unsigned .app
         run: |
